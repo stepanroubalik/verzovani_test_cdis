@@ -8,3 +8,6 @@ Udìlal jsem první zmìnu u sebe na localu.
 
 --ØEšení TPI--
 SELECT bod FROM PZSV_bod
+
+
+pøipraveno k uložení do githubu
