@@ -1,0 +1,20 @@
+-----TUNEL CELÝ SELECT-----
+select  to_char (EV_C), nazev_tunelu, tpi_fox.np_tratnpa.ctun, dop_c_kol, tpi_fox.np_tratnpa.cobjekt, tpi_fox.np_tratnpa.kmz, 
+        tpi_fox.np_tratnpa.kmk, tpi_fox.np_tratnpa.stdelka, tpi_fox.np_tratnpa.cisvj, tpi_fox.np_tratnpa.druhobj, tpi_fox.np_tratnpa.tunel 
+        from ext_mes_tunel 
+        left join TPI_FOX.NP_TRATNPA on ext_mes_tunel.EV_C = TPI_FOX.NP_TRATNPA.ctun 
+        and ext_mes_tunel.DOP_C_KOL = TPI_FOX.NP_TRATNPA.cobjekt
+
+--Tunel pracovní selecty
+--SELECT DISTINCT dop_c_kol FROM ext_mes_tunel
+
+-----MOST CELÝ SELECT------
+--select to_char (ID_MOSTU), material_nk, tpi_fox.np_tratnpa.idm tudu, tpi_fox.np_tratnpa.kmz, tpi_fox.np_tratnpa.kmk, tpi_fox.np_tratnpa.stdelka, tpi_fox.np_tratnpa.cisvj, tpi_fox.np_tratnpa.druhobj, tpi_fox.np_tratnpa.ekm from ext_mes_most
+--left join TPI_FOX.NP_TRATNPA on ext_mes_most.id_mostu = tpi_fox.np_tratnpa.idm
+--and ext_mes_most.DOP_C_KOL = TPI_FOX.NP_TRATNPA.cobjekt
+
+
+--Tunel pracovní selecty
+--select COUNT(to_char (ID_MOSTU)) from ext_mes_most
+--left join TPI_FOX.NP_TRATNPA on ext_mes_most.id_mostu = tpi_fox.np_tratnpa.idm
+--and ext_mes_most.DOP_C_KOL = TPI_FOX.NP_TRATNPA.cobjekt
